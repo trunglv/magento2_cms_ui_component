@@ -9,7 +9,7 @@ This module is used to implement UI Component to render content of a CMS Block.
    setup:static-content:deploy 
 ### General
 
-We make a UI component "Betagento_CmsUiComponent/js/view/cms_block". I will render a template content base on a return from a REST API "/V1/cmsuicomponent/:blockId". The UI component has a option is block_id, a identifier of a block.
+We make a UI component <b>"Betagento_CmsUiComponent/js/view/cms_block" </b>. I will render a template content base on a return from a REST API <b>"/V1/cmsuicomponent/:blockId"</b>. The UI component has a option is block_id, a identifier of a block.
 
 So you can easily import it to any parent component or use it standalonely. See blow usecases as an example.
 
