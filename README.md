@@ -1,4 +1,4 @@
-# cms_ui_component
+# Magento2 - CMS Block UI Component
 This module is used to implement UI Component to render a content of a CMS Block.
 
 ### Installation 
