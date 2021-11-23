@@ -9,7 +9,17 @@ This module is used to implement UI Component to render content of a CMS Block.
    setup:static-content:deploy 
 
 ### Use cases:
-## Add a new block cms on a checkout sidebar 
+#### Add a new block cms on a checkout sidebar 
+Define a processor hook for a Checkout layout process 
+```
+<type name="Magento\Checkout\Block\Onepage">
+        <arguments>
+            <argument name="layoutProcessors" xsi:type="array">
+                <item name="cms_ui_component" xsi:type="object">Betagento\CmsUiComponent\Plugin\Block\Checkout\LayoutProcessor</item>
+            </argument>
+        </arguments>
+    </type>
+```
 
 ```
 <?php
@@ -17,7 +27,7 @@ This module is used to implement UI Component to render content of a CMS Block.
 namespace Betagento\CmsUiComponent\Plugin\Block\Checkout;
 
 use  \Magento\Checkout\Block\Checkout\LayoutProcessorInterface;
-
+/*
 class LayoutProcessor implements LayoutProcessorInterface
 {
     public function process($jsLayout): array
@@ -28,7 +38,7 @@ class LayoutProcessor implements LayoutProcessorInterface
                 'component' => 'Betagento_CmsUiComponent/js/view/cms_block',
                 'displayArea' => 'shipping-information',
                 'config' => [
-                    'block_id' => 'checkout_sidebar'
+                    'block_id' => 'checkout_sidebar' /* This is identifier of a cms block that you want to show on checkout sidebar*/
                 ]
             ];
 
