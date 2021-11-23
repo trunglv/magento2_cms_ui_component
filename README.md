@@ -1,5 +1,5 @@
 # cms_ui_component
-This module is used to implement UI Component to render content of a CMS Block.
+This module is used to implement UI Component to render a content of a CMS Block.
 
 ### Installation 
 - Module path is : app/code/Betagento/CmsUiComponent
