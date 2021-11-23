@@ -1,6 +1,6 @@
 define([
     'jquery',
-    'Magento_Ui/js/form/form',
+    'uiComponent',
     'ko',
     'mage/storage',
     'Magento_Checkout/js/model/url-builder',
