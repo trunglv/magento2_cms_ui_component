@@ -7,6 +7,12 @@ This module is used to implement UI Component to render content of a CMS Block.
    module:enable Betagento_CmsUiComponent     
    di:setup:compile
    setup:static-content:deploy 
+### General
+
+We make a UI component "Betagento_CmsUiComponent/js/view/cms_block". I will render a template content base on a return from a REST API "/V1/cmsuicomponent/:blockId". The UI component has a option is block_id, a identifier of a block.
+
+So you can easily import it to any parent component or use it standalonely. See blow usecases as an example.
+
 
 ### Use cases:
 #### Add a new block cms on a checkout sidebar 
