@@ -2,7 +2,7 @@
     <type name="Magento\Checkout\Block\Onepage">
         <arguments>
             <argument name="layoutProcessors" xsi:type="array">
-                <item name="cms_ui_component" xsi:type="object">Betagento\CmsUiComponent\Plugin\Block\Checkout\LayoutProcessor</item>
+                <item name="cms_ui_component" xsi:type="object">Betagento\CmsUiComponent\Block\Checkout\LayoutProcessor\CmsUiComponentProcessor</item>
             </argument>
         </arguments>
     </type>

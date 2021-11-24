@@ -9,7 +9,7 @@ This module is used to implement UI Component to render a content of a CMS Block
    setup:static-content:deploy 
 ### General
 
-We make a UI component <b>"Betagento_CmsUiComponent/js/view/cms_block" </b>. I will render a template content base on a return from a REST API <b>"/V1/cmsuicomponent/:blockId"</b>. The UI component has a option is block_id, a identifier of a block.
+We make a UI component <b>"Betagento_CmsUiComponent/js/view/cms_block" </b>. I will render a template content base on a return from a REST API <b>"/V1/cmsuicomponent/:blockId"</b>. The UI component has a option is block_id - a identifier of a block.
 
 So you can easily import it to any parent component or use it standalonely. See blow usecases as an example.
 
@@ -21,7 +21,7 @@ Define a processor hook for a Checkout layout process
 <type name="Magento\Checkout\Block\Onepage">
         <arguments>
             <argument name="layoutProcessors" xsi:type="array">
-                <item name="cms_ui_component" xsi:type="object">Betagento\CmsUiComponent\Plugin\Block\Checkout\LayoutProcessor</item>
+                <item name="cms_ui_component" xsi:type="object">Betagento\CmsUiComponent\Block\Checkout\LayoutProcessor\CmsUiComponentProcessor</item>
             </argument>
         </arguments>
     </type>
@@ -30,11 +30,11 @@ Define a processor hook for a Checkout layout process
 ```
 <?php
 
-namespace Betagento\CmsUiComponent\Plugin\Block\Checkout;
+namespace Betagento\CmsUiComponent\Block\Checkout\LayoutProcessor;
 
 use  \Magento\Checkout\Block\Checkout\LayoutProcessorInterface;
-/*
-class LayoutProcessor implements LayoutProcessorInterface
+
+class CmsUiComponentProcessor implements LayoutProcessorInterface
 {
     public function process($jsLayout): array
     {
@@ -44,7 +44,7 @@ class LayoutProcessor implements LayoutProcessorInterface
                 'component' => 'Betagento_CmsUiComponent/js/view/cms_block',
                 'displayArea' => 'shipping-information',
                 'config' => [
-                    'block_id' => 'checkout_sidebar' /* This is identifier of a cms block that you want to show on checkout sidebar*/
+                    'block_id' => 'checkout_sidebar'
                 ]
             ];
 
