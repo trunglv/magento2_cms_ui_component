@@ -4,9 +4,11 @@ This module is used to implement UI Component to render a content of a CMS Block
 ### Installation 
 - Module path is : app/code/Betagento/CmsUiComponent
 - Commands are needed to setup
-   module:enable Betagento_CmsUiComponent     
-   di:setup:compile
-   setup:static-content:deploy 
+```
+module:enable Betagento_CmsUiComponent     
+di:setup:compile
+setup:static-content:deploy 
+```
 ### General
 
 We make a UI component <b>"Betagento_CmsUiComponent/js/view/cms_block" </b>. I will render a template content base on a return from a REST API <b>"/V1/cmsuicomponent/:blockId"</b>. The UI component has a option is block_id - a identifier of a block.
